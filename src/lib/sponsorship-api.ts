@@ -840,8 +840,7 @@ async function requireAuthenticatedUser(request: Request, env: Env) {
   }
 
   const url = env.SUPABASE_URL || env.VITE_SUPABASE_URL;
-  const key =
-    env.SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_ANON_KEY;
+  const key = env.SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
   if (!url || !key) {
     return { error: json({ error: "Supabase authentication config is missing." }, 503) };

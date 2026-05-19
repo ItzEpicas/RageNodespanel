@@ -199,8 +199,7 @@ async function getOptionalAuthenticatedUser(request: Request, env: Env) {
   if (!token) return null;
 
   const url = env.SUPABASE_URL || env.VITE_SUPABASE_URL;
-  const key =
-    env.SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_ANON_KEY;
+  const key = env.SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_PUBLISHABLE_KEY;
   if (!url || !key) return null;
 
   const client = createClient(url, key, {
