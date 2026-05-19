@@ -1,0 +1,1 @@
+lowercase kebab-case: minecraft-hosting-icon.png, minecraft-hosting-banner.png, ddos-protection-icon.png, admin-dashboard-banner.png, billing-panel-icon.png
